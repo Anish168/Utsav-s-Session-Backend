@@ -1,0 +1,92 @@
+<!-- Creating Our Routes -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Data</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Username</th>
+        </tr>
+
+        <% for(user of users){ %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= user.username %>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html> -->
+
+<!-- Edit Route -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Data</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Username</th>
+        </tr>
+
+        <% for(user of users){ %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= user.username %>
+                </td>
+                <!-- Edit the route -->
+                <td>
+                    <form method="GET" action="/user/<%=user.id%>/edit">
+                        <button>Edit the username</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>

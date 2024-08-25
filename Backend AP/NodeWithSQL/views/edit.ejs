@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Username</title>
+</head>
+
+<body>
+    <h2>YOU ARE ABOUT TO EDIT THIS USER : <%= user.username %>
+    </h2>
+    <!-- npm i method-override --:- for using PATCH method-->
+    <form method="post" action="/user/<%= user.id%>?_method = PATCH">
+        <textarea name="username"><%= user.username></textarea>
+        <input type="password" name="password" placeholder="enter password" />
+        <button>EDIT</button>
+    </form>
+</body>
+
+</html>
